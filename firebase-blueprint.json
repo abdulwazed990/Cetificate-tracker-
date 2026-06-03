@@ -1,0 +1,62 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User profile with their name, phone, email, profile picture, etc.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "profilePic": { "type": "string" },
+        "passwordHash": { "type": "string" },
+        "activeUid": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "name", "phone", "passwordHash", "activeUid", "createdAt"]
+    },
+    "Customer": {
+      "title": "Customer Record",
+      "description": "A customer record for tracking certifications/exams with financials, due, board alignment.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "ownerId": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "whatsapp": { "type": "string" },
+        "address": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "dateString": { "type": "string" },
+        "timeString": { "type": "string" },
+        "category": { "type": "string", "enum": ["A", "B"] },
+        "board": { "type": "string" },
+        "examType": { "type": "string" },
+        "groupType": { "type": "string" },
+        "workType": { "type": "string" },
+        "year": { "type": "integer" },
+        "additionalOptions": { "type": "array" },
+        "urgentDelivery": { "type": "boolean" },
+        "totalPrice": { "type": "number" },
+        "advance": { "type": "number" },
+        "due": { "type": "number" },
+        "paymentStatus": { "type": "string", "enum": ["Paid", "Partial", "Unpaid"] },
+        "notes": { "type": "string" },
+        "workStatus": { "type": "string", "enum": ["Pending", "Complete"] },
+        "lastUpdated": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "ownerId", "name", "phone", "category", "board", "createdAt", "lastUpdated", "year", "totalPrice", "advance", "due", "paymentStatus", "workStatus"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles which contain basic credentials and setups."
+    },
+    "/users/{userId}/customers/{customerId}": {
+      "schema": "Customer",
+      "description": "Secure, private collection of customer sheets/records owned by a specific user."
+    }
+  }
+}

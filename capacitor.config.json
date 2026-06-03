@@ -1,0 +1,8 @@
+{
+  "appId": "com.certificates.tracker",
+  "appName": "কাস্টমার সার্টিফিকেট ট্র্যাকার",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}

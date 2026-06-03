@@ -1,0 +1,24 @@
+{
+  "name": "কাস্টমার সার্টিফিকেট ট্র্যাকার",
+  "short_name": "সার্টিফিকেট ট্র্যাকার",
+  "description": "কাস্টমার সার্টিফিকেট ট্র্যাকিং ও সুপার সিকিউর অফলাইন ডাটাবেস",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

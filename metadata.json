@@ -1,0 +1,6 @@
+{
+  "name": "সার্টিফিকেট ট্র্যাকার",
+  "description": "কাস্টমারের কাঙ্ক্ষিত সার্টিফিকেটের প্রয়োজনীয় তথ্য, কাজের বিবরণ, পেমেন্ট অ্যাকাউন্ট ও হিস্টোরি ট্র্যাকিং সফটওয়্যার।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
