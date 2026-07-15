@@ -1,0 +1,4 @@
+npm run build
+git add .
+git commit -m "Fix GitHub Pages blank page issue by updating base path"
+git push origin main
